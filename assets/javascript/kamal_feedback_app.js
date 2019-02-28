@@ -25,7 +25,7 @@ $(".form-control").on("click", function () {
 
 // loading the table with existing feedback from the database
 dataRef.ref().on("value", function (snapshot) {
-    $("#time-table > tbody").empty();
+    $("#feedback-table > tbody").empty();
     snapshot.forEach(function (childSnapshot) {
 
         var newRow = $("<tr>").append(
@@ -35,7 +35,7 @@ dataRef.ref().on("value", function (snapshot) {
         );
 
         // Append the new row to the table
-        $("#time-table > tbody").append(newRow);
+        $("#feedback-table > tbody").append(newRow);
     });
 });
 
@@ -45,7 +45,7 @@ $("#add-feedback-btn").on("click", function (event) {
 
     // grabing field values from browser
     conName     = $("#conName").val().trim();
-    conRating   = $("input[id='conRating']").is(':checked').val();
+    conRating   = $("input[id='conRating']:checked").val();
     conFeedback = $("#conFeedback").val().trim();
 
     // checking time format & value for train time
@@ -80,7 +80,7 @@ $("#add-feedback-btn").on("click", function (event) {
 
         // clearing the fields
         $("#conName").val("");
-        $("#conRating").val("");
+        $("#conRating").attr( "checked", false );
         $("#conFeedback").val("");
 
         // appending in the table

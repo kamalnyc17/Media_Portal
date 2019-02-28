@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Customer Feedback</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- style sheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="container">
+
+        <!-- jumbotron to create the heading -->
+        <div class="jumbotron" style="background-color: rgb(81, 42, 42); color: white; padding: 25px">
+            <div class="row">
+                <div class="col-md-1">
+                    <img src="" class="img-fluid" alt="Our Logo">
+                </div>
+                <div class="col-md-11">
+                    <h1 class="text-center">Our Project Name</h1>
+                    <h3 class="text-center">Feedback Form</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- add new feedback  -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">Enter Your Feedback</div>
+                    <div class="card-body">
+
+                        <!-- data entry form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="conName" class="bold-font">Full Name:</label>
+                                <input class="form-control" id="conName" placeholder="" type="text">
+                                <p class="error-msg" id="conName-input-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="conRating" class="bold-font">Customer Rating:</label>
+                                <input class="form-control" id="conRating" placeholder="" type="text">
+                                <p class="error-msg" id="conRating-input-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="conFeedback" class="bold-font">Feedback</label>
+                                <textarea class="form-control" rows="5" id="conFeedback"></textarea>
+                                <p class="error-msg" id="conFeedback-input-error"></p>
+                            </div>
+                            <button class="btn btn-primary float-left" id="add-feedback-btn">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Existing feebacks -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">Current Train Schedule</div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover" id='time-table'>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="bold-font">Train Name</th>
+                                    <th scope="col" class="bold-font">Destination</th>
+                                    <th scope="col" class="bold-font time-col">Frequency (min)</th>
+                                    <th scope="col" class="bold-font time-col">Next Arrival</th>
+                                    <th scope="col" class="bold-font time-col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <!-- feedback data goes here via JS -->
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- bootstrap jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <!-- jquery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- javascript -->
+    <script src="assets/javascript/kamal_feedback_app.js"></script>
+</body>
+
+</html>

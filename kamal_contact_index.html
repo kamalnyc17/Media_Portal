@@ -2,97 +2,140 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Project 01 Contact Form</title>
+    <title>Project 01 Contact Form</title>
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-  <!-- style sheets -->
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- style sheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
-  <!-- firebase -->
-  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
-  <!-- Link to Moment.js should go here -->
-  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- style needed for this page -->
+    <style>
+        #map {
+              height: 170px;
+              width: 50px;
+              margin: auto;
+        }            
+        .error-msg {
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- main container -->
-  <div class="container">
+    <!-- main container -->
+    <div class="container">
 
-    <!-- jumbotron to create the heading -->
-    <div class="jumbotron" style="background-color: rgb(81, 42, 42); color: white; padding: 25px">
-      <div class="row">
-        <div class="col-md-1">
-          <img src="assets/images/amtrak logo.jpg" class="img-fluid" alt="Our Logo">
+        <!-- jumbotron to create the heading -->
+        <div class="jumbotron" style="background-color: rgb(81, 42, 42); color: white; padding: 25px">
+            <div class="row">
+                <div class="col-md-1">
+                    <img src="assets/images/amtrak logo.jpg" class="img-fluid" alt="Our Logo">
+                </div>
+                <div class="col-md-11">
+                    <h1 class="text-center">Our Project Name</h1>
+                    <h3 class="text-center">Contact Form</h3>
+                </div>
+            </div>
         </div>
-        <div class="col-md-11">
-          <h1 class="text-center">Our Project Name</h1>
-          <h3 class="text-center">Contact Form</h3>
+
+        <!-- our address and map -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header" id="address">Our Address</div>
+                    <div class="card-body">
+                        <p>Project Team 01</p>
+                        <p>Columbia University</p>
+                        <p>116th St & Broadway</p>
+                        <p>New York, NY 10027</p>
+                        <p>Email: abmk@gmail.com</p>
+                        <p>Phone: 212-555-1234</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5" id="map"></div>
         </div>
-      </div>
+
+
+        <!-- add contact information  -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">Contact Form</div>
+                    <div class="card-body">
+
+                        <!-- data entry form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="userName-input" class="bold-font">Full Name:</label>
+                                <input class="form-control" id="userName" placeholder="" type="text">
+                                <p class="error-msg" id="userName-input-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="userEmail-input" class="bold-font">Email:</label>
+                                <input class="form-control" id="userEmail" placeholder="" type="text">
+                                <p class="error-msg" id="userEmail-input-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="userSub-input" class="bold-font">Subject:</label>
+                                <input class="form-control" id="userSub" placeholder="" type="text">
+                                <p class="error-msg" id="userSub-input-error"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="userComm-input" class="bold-font">Comments:</label>
+                                <input class="form-control" id="userComm-input" placeholder="" type="textarea" rows="3">
+                                <p class="error-msg" id="userComm-input-error"></p>
+                            </div>
+                            <button class="btn btn-primary float-left" id="add-train-btn">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- add new schedule  -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card mb-4">
-          <div class="card-header">Contact Form</div>
-          <div class="card-body">
+    <!-- bootstrap jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 
-            <!-- data entry form -->
-            <form>
-              <div class="form-group">
-                <label for="userName-input" class="bold-font">Full Name:</label>
-                <input class="form-control" id="userName" placeholder="" type="text">
-                <p class="error-msg" id="userName-input-error"></p>
-              </div>
-              <div class="form-group">
-                <label for="userEmail-input" class="bold-font">Email:</label>
-                <input class="form-control" id="userEmail" placeholder="" type="text">
-                <p class="error-msg" id="userEmail-input-error"></p>
-              </div>
-              <div class="form-group">
-                <label for="userSub-input" class="bold-font">Subject:</label>
-                <input class="form-control" id="userSub" placeholder="" type="text">
-                <p class="error-msg" id="userSub-input-error"></p>
-              </div>
-              <div class="form-group">
-                <label for="userComm-input" class="bold-font">Comments:</label>
-                <input class="form-control" id="userComm-input" placeholder="" type="textarea" rows="3">
-                <p class="error-msg" id="userComm-input-error"></p>
-              </div>
-              <button class="btn btn-primary float-left" id="add-train-btn">Submit</button>
-            </form>
+    <!-- jquery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- javascript -->
+    <script src="assets/javascript/app.js"></script>
 
-  <!-- bootstrap jquery-->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
+    <!--- google map display -->
+    <script>
+        var map;
 
-  <!-- jquery library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <!--smtpjs -->
-  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>-->
-
-  <!-- javascript -->
-  <script src="assets/javascript/app.js"></script>
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 40.807537,
+                    lng: -73.962570
+                },
+                zoom: 15
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWnsvmbAIJguQHnqP4jMKIw6IfsBjhg4g&callback=initMap" async defer></script>
+    <!-- google map ends here -->
 </body>
 
 </html>

@@ -86,7 +86,7 @@ $("#add-contact-btn").on("click", function (event) {
             "access_token": "cyhwsf1jf171h4swil5qtua0"
         };
 
-        var subject = userSub;
+        var subject = userName + ":- " + userSub;
         var message = userComm;
         data['subject'] = subject;
         data['text'] = message;

@@ -6,8 +6,8 @@ var config = {
     projectId: "fir-project-7da0a",
     storageBucket: "fir-project-7da0a.appspot.com",
     messagingSenderId: "779232897200"
-  };
-  firebase.initializeApp(config);  
+};
+firebase.initializeApp(config);
 var dataRef = firebase.database();
 
 // global variables
@@ -31,13 +31,13 @@ $("#add-contact-btn").on("click", function (event) {
 
     var isRight = true;
     // grabing field values from browser
-    userName    = $("#userName").val().trim();
-    userEmail   = $("#userEmail").val().trim();
-    userSub     = $("#userSub").val().trim();
-    userComm    = $("#userComm").val().trim();
+    userName = $("#userName").val().trim();
+    userEmail = $("#userEmail").val().trim();
+    userSub = $("#userSub").val().trim();
+    userComm = $("#userComm").val().trim();
 
     // checking format of email field PENDING
-    if (!validateEmail( userEmail)) {
+    if (!validateEmail(userEmail)) {
         userEmail = "";
     }
 
@@ -80,6 +80,18 @@ $("#add-contact-btn").on("click", function (event) {
         $("#userEmail").val("");
         $("#userSub").val("");
         $("#userComm").val("");
+
+        // send email to customer service mailbox using POSTMAIL
+        var data = {
+            "access_token": "cyhwsf1jf171h4swil5qtua0"
+        };
+
+        var subject = userSub;
+        var message = userComm;
+        data['subject'] = subject;
+        data['text'] = message;
+
+        $.post('https://postmail.invotes.com/send', data);
     }
 });
 

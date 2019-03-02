@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>News Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <style>
+    img {
+      height: 40px;
+      width: 40px;
+    }
+    .btn {
+      margin-right:5px;
+      font-size: 10px;
+    }
+    .form-control {
+      width: 400px;
+      margin: 10px 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>News Search Portal</h2>
+    <div class="row">
+      <label for="userName-input" class="bold-font">What are you looking for?</label>
+      <input class="form-control" id="searchTerm" placeholder="" type="text">
+      <button class="btn btn-primary float-left" id="add-search-btn">SEARCH</button>
+    </div>
+    <button class="btn btn-primary float-left" id="add-liberal-btn">LIBERAL</button>
+    <button class="btn btn-primary float-left" id="add-msnbc-btn">MSNBC</button>
+    <button class="btn btn-primary float-left" id="add-cnn-btn">CNN</button>
+    <button class="btn btn-primary float-left" id="add-washington-btn">THE WASHINGTON POST</button>
+    <button class="btn btn-primary float-left" id="add-conservative-btn">CONSERVATIVE</button>
+    <button class="btn btn-primary float-left" id="add-foxnews-btn">FOX NEWS</button>
+    <button class="btn btn-primary float-left" id="add-national-btn">NATIONAL REVIEW</button>
+    <button class="btn btn-primary float-left" id="add-breitbart-btn">BREITBART NEWS</button>
+
+
+    <table class="table">
+      <thead>
+        <tr>
+          <!-- The scope attribute specifies that this is a header for a column -->
+          <th scope="col">News Source</th>
+          <th scope="col">Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Insert news items rows here -->
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // News API testing by Kamal. Not part of the class
+
+    function runSearch() {
+      // this API is for "I want to search across every news article that mentions a specific topic or keyword (limited to the last 6 months)."
+      var searchTerm = $("#searchTerm").val().trim();
+      console.log( searchTerm);
+
+      for (var j = 1; j < 6; j++) {
+        var queryURL =
+          "https://newsapi.org/v2/everything?q=" + searchTerm + "&from=2019-03-01&sortBy=popularity?sources=cnn&apiKey=1f24541f63fa4ac79c46c7df37094bed&pageSize=100&page=" +
+          j.toString().trim();
+
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function (response) {
+          console.log(response);
+          for (var i = 0; i < 99; i++) {
+            // make sure the media source we are looking for
+            var sourceName = response.articles[i].source.name.toUpperCase();
+
+            if ((sourceName === "CNN") || (sourceName === "FOX NEWS") || (sourceName === "THE WASHINGTON POST") ||
+              (
+                sourceName === "NATIONAL REVIEW") || (sourceName === "MSNBC") || (sourceName === "BREITBART NEWS")) {
+              // Create a new table row element
+              if (sourceName === "THE WASHINGTON POST") {
+                sourceName1 = "THE-WASHINGTON-POST";
+              } else {
+                sourceName1 = sourceName.replace(" ", "-");
+              }
+
+              var tRow = $("<tr class='" + sourceName1 + "'>");
+              var sourceID = $("<td>").html('<a href="' + response.articles[i].url + '" target="_blank">' + response.articles[i].source.name + '</a></td></tr>');
+              var summary = $("<td>").text(response.articles[i].description);
+
+              //var imgLink = $("<td>").html('<a href="' + response.articles[i].url  + '" target="_blank">'+ '<img src="' + response.articles[i].urlToImage + '"></a></td></tr>');
+              // var pageLink = $("<td>").html('<a href="' + response.articles[i].url + '" target="_blank">' + response.articles[i].title + '</a></td></tr>');
+
+              // Append the newly created table data to the table row
+              tRow.append(sourceID, summary);
+              // Append the table row to the table body
+              $("tbody").append(tRow);
+            }
+          }
+        });
+      }
+    }
+    // CNN Ends Here
+
+    // run search
+    
+    $("#add-search-btn").on("click", function () {
+      runSearch();
+    })
+
+    //  news hide when based on button clicked
+    // liberal media
+    $("#add-liberal-btn").on("click", function () {
+      $(".THE-WASHINGTON-POST, .MSNBC, .CNN").show();
+      $(".BREITBART-NEWS, .FOX-NEWS ,.NATIONAL-REVIEW").hide();
+    })
+    $("#add-msnbc-btn").on("click", function () {
+      $(".MSNBC").show();
+      $(".THE-WASHINGTON-POST, .NATIONAL-REVIEW, .BREITBART-NEWS, .CNN, .FOX-NEWS").hide();
+    })
+    $("#add-cnn-btn").on("click", function () {
+      $(".CNN").show();
+      $(".MSNBC, .THE-WASHINGTON-POST, .NATIONAL-REVIEW, .BREITBART-NEWS, .FOX-NEWS").hide();
+    })
+    $("#add-washington-btn").on("click", function () {
+      $(".THE-WASHINGTON-POST").show();
+      $(".MSNBC, .NATIONAL-REVIEW, .BREITBART-NEWS, .CNN, .FOX-NEWS").hide();
+    })
+
+    // consevative media    
+    $("#add-conservative-btn").on("click", function () {
+      $(".BREITBART-NEWS, .FOX-NEWS, .NATIONAL-REVIEW").show();
+      $(".THE-WASHINGTON-POST, .MSNBC, .CNN").hide();
+    })
+    $("#add-foxnews-btn").on("click", function () {
+      $(".FOX-NEWS").show();
+      $(".MSNBC, .THE-WASHINGTON-POST, .NATIONAL-REVIEW, .CNN, .BREITBART-NEWS").hide();
+    })
+    $("#add-national-btn").on("click", function () {
+      $(".NATIONAL-REVIEW").show();
+      $(".MSNBC, .THE-WASHINGTON-POST, .BREITBART-NEWS, .CNN, .FOX-NEWS").hide();
+    })
+    $("#add-breitbart-btn").on("click", function () {
+      $(".BREITBART-NEWS").show();
+      $(".MSNBC, .THE-WASHINGTON-POST, .NATIONAL-REVIEW, .CNN, .FOX-NEWS").hide();
+    })
+  </script>
+</body>
+
+</html>

@@ -28,7 +28,7 @@
   <nav class="navbar navbar-expand-lg navbar-light text-uppercase navigation-clean" style="color: white; background-color: darkblue; opacity: .75; position: fixed; top: 0; width: 100%; z-index: 100; border-radius: 0px">
     <div class="container">
       <a class="navbar-brand" href="#mediaportal">
-        <logo id="logo" style="color: white; padding: 10px; background-color: red; border-radius: 8px">SAY SO MEDIA</logo>
+        <logo id="logo" style="color: white; padding: 10px; margin-left: 18px; background-color: red; border-radius: 8px">SAY SO MEDIA</logo>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navcol-1" aria-controls="navbarColor01"
         aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navcol-1">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav mr-auto" style="float: right; padding-top: 10px">
           <li class="nav-item ml-5">
             <a class="nav-link" id="links" href="#mediaportal">Media Portal <span class="sr-only">(current)</span></a>
           </li>
@@ -67,20 +67,21 @@
   </nav>
   <!-- <div class="container main" > -->
   <section id="main">
+    
     <!-- jumbotron starts here -->
     <div class="jumbotron" style="background: rgba(255, 255, 255, 0.5); max-width: 80%; margin: 0 auto; text-align: center">
 
       <a name="mediaportal"></a>
-      <div class="container empty"></div>
+      <!-- <div class="container empty"></div> -->
       <h2>Media Portal</h2>
       <!-- <div class="container"> -->
       <div class="row align-items-center justify-content-center" id="search-bar">
         <!-- search bar-->
-        <div class="col-lg-7 col-md-12">
+        <div class="col-lg-12 col-md-12">
           <label for="userName-input" class="bold-font"></label>
           <input class="form-control " id="searchTerm" placeholder="Enter a keyword and scroll down" type="text">
-        </div>
-        <div class="col-lg-5 col-md-12 mt-4">
+        <!-- </div> -->
+        <!-- <div class="col-lg-5 col-md-12 mt-4"> -->
           <button class="btn btn-info ml-2" id="add-search-btn">Search All</button>
           <button class="btn btn-info ml-2" id="add-article-btn">Search Article</button>
           <button class="btn btn-info ml-2" id="add-video-btn">Search Video</button>
@@ -88,19 +89,19 @@
       </div>
 
       <div class="row justify-content-center mt-4">
-        <button class="btn btn-primary" id="add-liberal-btn">LIBERAL |</button>
-        <button class="btn btn-primary ml-1" id="add-msnbc-btn">MSNBC |</button>
-        <button class="btn btn-primary ml-1" id="add-cnn-btn">CNN |</button>
-        <button class="btn btn-primary ml-1" id="add-washington-btn">THE WASHINGTON POST |</button>
-        <button class="btn btn-danger ml-1" id="add-foxnews-btn">FOX NEWS |</button>
-        <button class="btn btn-danger ml-1" id="add-national-btn">NATIONAL REVIEW |</button>
-        <button class="btn btn-danger ml-1" id="add-breitbart-btn">BREITBART NEWS |</button>
+        <button class="btn btn-primary" id="add-liberal-btn">LIBERAL  </button>
+        <button class="btn btn-primary ml-1" id="add-msnbc-btn">MSNBC  </button>
+        <button class="btn btn-primary ml-1" id="add-cnn-btn">CNN  </button>
+        <button class="btn btn-primary ml-1" id="add-washington-btn">THE WASHINGTON POST  </button>
+        <button class="btn btn-danger ml-1" id="add-foxnews-btn">FOX NEWS  </button>
+        <button class="btn btn-danger ml-1" id="add-national-btn">NATIONAL REVIEW  </button>
+        <button class="btn btn-danger ml-1" id="add-breitbart-btn">BREITBART NEWS  </button>
         <button class="btn btn-danger ml-1" id="add-conservative-btn">CONSERVATIVE</button>
       </div>
-    </div>
-    <!-- </div> -->
-    <div class="container">
-      <h2>A comprehensive view</h2>
+      <!-- </div> -->
+      <!-- <div class="container">
+        <h2>A comprehensive view</h2>
+      </div> -->
     </div>
   </section>
 
@@ -159,6 +160,38 @@
   <div class="container empty"></div>
   <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
 
+    <div class="container">
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fab fa-lg fa-facebook-f"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fab fa-lg fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <i class="fab fa-lg fa-google-plus-g"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fab fa-lg fa-linkedin-in"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1">
+            <i class="fab fa-lg fa-dribbble"> </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+    </div>
     <!-- about us page -->
   <a name="aboutus"></a>
   <div class="container empty"></div>
@@ -191,7 +224,7 @@
   <div data-aos="zoom-out">
     <div class="container" style="margin: 0 auto; text-align: center; margin-top: 50px">
       <!-- <div class="container"> -->
-      <div class="card">
+      <!-- <div class="card"> -->
         <div class="row">
           <!-- <div class="col-md-4">
                   <h1>Name</h1>
@@ -233,7 +266,7 @@
               <p>Doesn't have a picture</p>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
       <!-- </div> -->
     </div>
@@ -373,7 +406,7 @@
           </div>
         </div>
       </div>
-
+      <div class="container empty"></span></div>
       <!-- footer -->
       <footer style="background-color: black; color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; opacity: .75; border-top: 1px solid; padding: 15px; text-align: center">
         <div class="container">

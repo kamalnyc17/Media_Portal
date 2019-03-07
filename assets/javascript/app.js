@@ -156,8 +156,7 @@ function youtubeSearch() {
                 var tRow = $("<tr class='" + sourceName2 + "'>");
                 var sourceID = $("<td>").html('<a href="https://www.youtube.com/watch?v=' + response.items[i].id.videoId + '" target="_blank">' + sourceName1 + '</a></td></tr>');
                 var summary = $("<td>").text(summary1);
-                //var imgLink = $("<td>").html('<a href="https://www.youtube.com/watch?v=' + response.items[i].id.videoId + '" target="_blank">' + '<img src="' + response.items[i].snippet.thumbnails.default.url + '" data-toggle="modal"></a></td></tr>');
-
+                
                 var imgLink = $("<td>").html("<a onclick='changeVideo(" + '"' + response.items[i].id.videoId + '"' + ")'>" + '<img src="' + response.items[i].snippet.thumbnails.default.url + '"></a></td></tr>');
 
                 console.log("<a onclick='changeVideo(" + '"' + response.items[i].id.videoId + '"' + ")'>");

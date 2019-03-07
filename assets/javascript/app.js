@@ -30,7 +30,7 @@ function getLocation() {
 
 // current location - call back function
 function showPosition(position) {
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=e7c19489986c1a711e1a0f56bb3588ac";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=e7c19489986c1a711e1a0f56bb3588ac";
 
     $.ajax({
         url: queryURL,

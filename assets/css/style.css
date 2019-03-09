@@ -1,237 +1,234 @@
 .navcolor{
-background-color: #ffffff;
-background-color: rgba(red, green, blue, 0.6);
-}
-#navbarColor01 {
-  /* padding-top: 15px; */
-  /* padding-bottom: 15px; */
-}
-.hrBlack{
-  border:1px solid black;
-}
-.backChange{
-    background-color:rgba(254, 254, 254, 0.5);
-}
-body{
-  /* color:black; */
-}
-html{
-font-family: Arial, Helvetica, sans-serif ;
-}
-.logo{
-    font-size: 30px;
-    border-radius:10px;
-    border:1px solid white;
-    margin-top:5px;
-    background-color: rgb(44, 62, 80);
-    padding:5px;
-    color: white;
-}
-/* .secondrow{
-    background-color:rgba(9, 25, 49, 0.4);
-    margin:0;
-    padding:0;
-    color:black;
-} */
-.searchWraper{
-    border: 1px solid gray;
-    padding:4px;
-    margin-bottom:4px; 
-    border-radius: 10px;
-}
-#contSec{
-padding:5px;
-}
-@media screen and (max-width: 767px) {
-    #contSec{
-        width:100%;
-        border-bottom: 1px solid white;
-        }
-    }
-.displayvideo{
-    background-color:rgb(180, 177, 189); 
-    height:500px;
-}
-hr {
-    border:1px solid white;
-    margin:0;
-    padding:0;
-}
-#player{
-    width:1920px;
-    background-color:moccasin;
-}
-.mainSearch{
-    height:250px;
-    width:100px;
-}
-#map {
-    height: 243px;
-    /* width: 50px; */
-    width:100%;
-    margin: auto;
-  }            
-  .error-msg {
-    color: red;
-    font-size: 20px;
-    font-weight: bold;
+  background-color: #ffffff;
+  background-color: rgba(red, green, blue, 0.6);
   }
-  img {
-    height: 40px;
-    width: 40px;
+  #navbarColor01 {
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
   }
-  .btn{
-    margin-right:5px;
-    font-size: 10px;
+  .hrBlack{
+    border:1px solid black;
   }
-/* .form-control {
-    width:100%;
-    margin: 10px 10px;
+  .backChange{
+      background-color:rgba(254, 254, 254, 0.5);
+  }
+  body{
+    /* color:black; */
+  }
+  html{
+  font-family: Arial, Helvetica, sans-serif ;
+  }
+  .logo{
+      font-size: 30px;
+      border-radius:10px;
+      border:1px solid white;
+      margin-top:5px;
+      background-color: rgb(44, 62, 80);
+      padding:5px;
+      color: white;
+  }
+  /* .secondrow{
+      background-color:rgba(9, 25, 49, 0.4);
+      margin:0;
+      padding:0;
+      color:black;
   } */
-  h3 {
-    font-size: 24px; 
-    /* line-height: 30px;
-    font-weight: bold; */
-    text-align: center;
-    /* margin-bottom: 5px; */
+  .searchWraper{
+      border: 1px solid gray;
+      padding:4px;
+      margin-bottom:4px; 
+      border-radius: 10px;
   }
-  h2 {
-    font-size: 24px; 
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
-    /* margin-bottom: 5px; */
+  #contSec{
+  padding:5px;
   }
-  /* .bold-font,
-  #searchTerm,
-  #add-search-btn {
-    display: inline-block;      
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }     */
-  .search-row {      
-    margin: 0 auto;
-    vertical-align: center;
-    /* border: 1px solid black; */
-    margin-bottom: 10px;
-    /* padding: 0 10px 0 10px; */
-    width: 80%;
-
+  /* @media screen and (max-width: 767px) {
+      #contSec{
+          width:100%;
+          border-bottom: 1px solid white;
+          }
+      } */
+  .displayvideo{
+      background-color:rgb(180, 177, 189); 
+      height:500px;
   }
-  /*footer {
-    padding: 10px;
-    font-size: 12px;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    border-top: 1px solid #000000;
-    bottom: 0;
-    left: 0;
-    clear: both;
-    width: 100%;
-} */
-
-#ambklogo {
-    height: 40px;
-    width: 80px;
-}
-.empty {
-    height: 50px;
-    width: 100%;
-    /* padding: 10px; */
-    /* background-color: yellow; */
-}
-
-#links {
-  color: white;
-  font-weight: bold;
-}
-hr {
-  /* padding-top: 10px; */
-  border-top: 1px black solid;
-}
-.commonStuff {
-  padding-bottom: 20px;
-}
-/*#currentUserInfo {
-  color: white;
-  font-weight: bold;
-}*/
-#menu{
-    background-color: white;
+  hr {
+      border:1px solid white;
+      margin:0;
+      padding:0;
+  }
+  #player{
+      width:1920px;
+      background-color:moccasin;
+  }
+  .mainSearch{
+      height:250px;
+      width:100px;
+  }
+  #map {
+      /* height: 170px; */
+      /* width: 50px; */
+      height: 243px;
+      width: 100%;
+      margin: auto;
+    }            
+    .error-msg {
+      color: red;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    img {
+      height: 40px;
+      width: 40px;
+    }
+    .btn{
+      margin-right:5px;
+      font-size: 10px;
+    }
+  /* .form-control {
+      width:100%;
+      margin: 10px 10px;
+    } */
+    h3 {
+      font-size: 24px; 
+      /* line-height: 30px;
+      font-weight: bold; */
+      text-align: center;
+      /* margin-bottom: 5px; */
+    }
+    h2 {
+      font-size: 24px; 
+      line-height: 30px;
+      font-weight: bold;
+      text-align: center;
+      /* margin-bottom: 5px; */
+    }
+    /* .bold-font,
+    #searchTerm,
+    #add-search-btn {
+      display: inline-block;      
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }     */
+    .search-row {      
+      margin: 0 auto;
+      vertical-align: center;
+      /* border: 1px solid black; */
+      margin-bottom: 10px;
+      /* padding: 0 10px 0 10px; */
+      width: 80%;
+    }
+    /* footer {
+      padding: 10px;
+      font-size: 12px;
+      background-color: lightgray;
+      color: #000000;
+      text-align: center;
+      border-top: 1px solid #000000;
+      bottom: 0;
+      left: 0;
+      clear: both;
+      width: 100%;
+  } */
+  #ambklogo {
+      height: 50px;
+      width: 80px;
+  }
+  .empty {
+      height: 200px;
+      width: 100%;
+      /* padding: 10px; */
+      /* background-color: yellow; */
+  }
+  #links {
+    /* color: black; */
+    color: white;
+  }
+  hr {
+    /* padding-top: 10px; */
+    border-top: 1px black solid;
+  }
+  #currentUserInfo {
+    padding-bottom: 10px;
+  }
+  #menu{
+      background-color: white;
+      color: black;
+  }
+  .btn {
+    background-color: inherit;
+    border: 0;
+    padding: 0;
     color: black;
-}
-
-.btn {
-  background-color: inherit;
-  border: 0;
-  padding: 0;
-  color: black;
-  /* color: white; */
-  font-size: 100%;
-}
-.card{
-  border-radius: 8px;
-}
-
-#main {
-  background: url("../images/high-research-flag-50.jpg");
-  /* opacity: .5; */
-  height: 100vh;
-  background-size: cover;
-  /* width: 100%; */
-  padding-top: 250px;
-  /* color: white; */
-  color: black;
-}
-.search-container {
-  border-style: solid;
-  border-radius: 16px;
-  text-align: center;
-  /* margin: 0 auto; */
-  /* float: left; */
-  /* background-image: url("../images/politics.png"); */
-}
- 
-.results-container {
-  border-radius: 16px;
-  border-style: solid;
-  /* float: right; */
-  margin: 0 auto;
-  max-width: 960px;
-}
-
-#masthead {
-  /* background-image: url("../images/politics.png"); */
-  /* background-color: lightblue; */
-  background: linear-gradient(to left, red 0%, white 50%, blue 100%);
-  height: 500px;
-  background-size: cover;
-  padding: 40px;
-  margin-bottom: 50px;
-  /* margin: 0 auto; */
-}
-
-#masthead .jumbotron {
-  border-radius: 16px;
-  /* background: rgba(255, 255, 255, .75); */
-  /* opacity: 1; */
-  text-align: center;
-  margin: 0 auto;
-  max-width: 800px;
-  height: 100%;
-}
-
-#portraits {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-}
-
-i {
-  text-decoration: none;
-}
-
+    /* color: white; */
+    font-size: 100%;
+  }
+  .card{
+    border-radius: 8px;
+  }
+  #main {
+    /* background: url("../images/high-research-flag-50.jpg"); */
+    /* opacity: .5; */
+    height: 100vh;
+    background-size: cover;
+    /* width: 100%; */
+    padding-top: 250px;
+    /* color: white; */
+    color: black;
+  }
+  .search-container {
+    border-style: solid;
+    border-radius: 16px;
+    text-align: center;
+    /* margin: 0 auto; */
+    /* float: left; */
+    /* background-image: url("../images/politics.png"); */
+  }
+   
+  .results-container {
+    border-radius: 16px;
+    border-style: solid;
+    /* float: right; */
+    margin: 0 auto;
+    max-width: 960px;
+  }
+  #masthead {
+    /* background-image: url("../images/politics.png"); */
+    /* background-color: lightblue; */
+    background: linear-gradient(to left, red 0%, white 50%, blue 100%);
+    height: 500px;
+    background-size: cover;
+    padding: 40px;
+    margin-bottom: 50px;
+    /* margin: 0 auto; */
+  }
+  #masthead .jumbotron {
+    border-radius: 16px;
+    /* background: rgba(255, 255, 255, .75); */
+    /* opacity: 1; */
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    height: 100%;
+  }
+  #portraits {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  i {
+    text-decoration: none;
+  }
+  h1 {
+    text-align: center;
+  }
+  /* #logo{
+    color: white;
+    background-color: red;
+    border-radius: 8px;
+    padding: 10px;
+  } */
+  

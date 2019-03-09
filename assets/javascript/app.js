@@ -2,7 +2,7 @@
 var timeNow; //setInterval variable
 /* news media portal variables */
 var ytChannelID = ["UCun4tg1BecN4PuxwZ6mL3NA", "UCXIJgqnII2ZOINSWNOGFThA", "UCmgnsaQIK1IR808Ebde-ssA", "UCupvZG-5ko_eiXAupbDfxWw", "UCaXkIU1QidjPwiAYu6GcHjg", "UCHd62-u_v4DvJ8TCFtpi4GA"]
-var ytAPIkey = "AIzaSyDwNPeSARNW9VJI2fY3EJgGAYz2HewTjqo"
+var ytAPIkey = "AIzaSyBW3X4R4Eke37gYShO54y5WtSR9LtvhLL0"
 var ytQueryURL = ""
 var ytMaxResults = "5"
 /* contact page variables */
@@ -16,7 +16,7 @@ var conName;
 var conRating;
 var conFeedback;
 /* backup API Keys
-  AIzaSyDzIYi0kQBAoQQgjq6-lp2-RtOH0I7oJRs, AIzaSyBW3X4R4Eke37gYShO54y5WtSR9LtvhLL0, AIzaSyDwNPeSARNW9VJI2fY3EJgGAYz2HewTjqo, AIzaSyC-SwoIU-bXwFM9KCmd9XobZGuy35IEv3E, AIzaSyDzIYi0kQBAoQQgjq6-lp2-RtOH0I7oJRs
+  AIzaSyDzIYi0kQBAoQQgjq6-lp2-RtOH0I7oJRs, AIzaSyDwNPeSARNW9VJI2fY3EJgGAYz2HewTjqo, AIzaSyDwNPeSARNW9VJI2fY3EJgGAYz2HewTjqo, AIzaSyC-SwoIU-bXwFM9KCmd9XobZGuy35IEv3E, AIzaSyDzIYi0kQBAoQQgjq6-lp2-RtOH0I7oJRs
 */
 /* homepage related scripts */
 // current location - main function
@@ -72,7 +72,7 @@ $(document).ready(function () {
 // video pop up
 $(document).ready(function () {
     $("#myModal").on("hidden.bs.modal", function () {
-        $("#iframeYoutube").attr("src", "#");
+        $("#iframeYoutube").trigger("src", "#");
     })
 })
 

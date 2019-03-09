@@ -175,12 +175,12 @@
   #main {
     /* background: url("../images/high-research-flag-50.jpg"); */
     /* opacity: .5; */
-    height: 100vh;
-    background-size: cover;
+    /* height: 100vh; */
+    /* background-size: cover; */
     /* width: 100%; */
     padding-top: 250px;
     /* color: white; */
-    color: black;
+    /* color: black; */
   }
   .search-container {
     border-style: solid;

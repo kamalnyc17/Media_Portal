@@ -2,7 +2,7 @@
 var timeNow; //setInterval variable
 /* news media portal variables */
 var ytChannelID = ["UCun4tg1BecN4PuxwZ6mL3NA", "UCXIJgqnII2ZOINSWNOGFThA", "UCmgnsaQIK1IR808Ebde-ssA", "UCupvZG-5ko_eiXAupbDfxWw", "UCaXkIU1QidjPwiAYu6GcHjg", "UCHd62-u_v4DvJ8TCFtpi4GA"]
-var ytAPIkey = "AIzaSyBW3X4R4Eke37gYShO54y5WtSR9LtvhLL0"
+var ytAPIkey = "AIzaSyDzIYi0kQBAoQQgjq6-lp2-RtOH0I7oJRs";
 var ytQueryURL = ""
 var ytMaxResults = "5"
 /* contact page variables */
@@ -16,7 +16,7 @@ var conName;
 var conRating;
 var conFeedback;
 /* backup API Keys
-  AIzaSyDzIYi0kQBAoQQgjq6-lp2-RtOH0I7oJRs, AIzaSyDwNPeSARNW9VJI2fY3EJgGAYz2HewTjqo, AIzaSyDwNPeSARNW9VJI2fY3EJgGAYz2HewTjqo, AIzaSyC-SwoIU-bXwFM9KCmd9XobZGuy35IEv3E, AIzaSyDzIYi0kQBAoQQgjq6-lp2-RtOH0I7oJRs
+  AIzaSyBW3X4R4Eke37gYShO54y5WtSR9LtvhLL0, AIzaSyDwNPeSARNW9VJI2fY3EJgGAYz2HewTjqo, AIzaSyDwNPeSARNW9VJI2fY3EJgGAYz2HewTjqo, AIzaSyC-SwoIU-bXwFM9KCmd9XobZGuy35IEv3E, AIzaSyDzIYi0kQBAoQQgjq6-lp2-RtOH0I7oJRs
 */
 /* homepage related scripts */
 // current location - main function
@@ -74,6 +74,7 @@ $(document).ready(function () {
     $("#myModal").on("hidden.bs.modal", function () {
         $("#iframeYoutube").trigger("src", "#");
     })
+    $(".newsarticleH2, .newsvideoH2").hide();
 })
 
 function changeVideo(vId) {
@@ -137,7 +138,6 @@ function youtubeSearch() {
             url: ytQueryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response)
             for (var i = 0; i < 5; i++) {
                 // make sure the channel names are same between youtube and articles
                 sourceName1 = response.items[i].snippet.channelTitle.toUpperCase();
@@ -159,7 +159,6 @@ function youtubeSearch() {
                 
                 var imgLink = $("<td>").html("<a onclick='changeVideo(" + '"' + response.items[i].id.videoId + '"' + ")'>" + '<img src="' + response.items[i].snippet.thumbnails.default.url + '"></a></td></tr>');
 
-                console.log("<a onclick='changeVideo(" + '"' + response.items[i].id.videoId + '"' + ")'>");
                 tRow.append(sourceID, summary, imgLink);
 
                 // Append the table row to the table body
@@ -172,6 +171,8 @@ function youtubeSearch() {
 
 // search all button
 $("#add-search-btn").on("click", function () {
+    $(".newsarticle tbody tr").remove(); 
+    $(".newsvideo tbody tr").remove(); 
     runSearch();
     youtubeSearch();
     $(".newsarticle, .newsarticleH2").show();

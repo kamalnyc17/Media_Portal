@@ -146,6 +146,10 @@
       /* padding: 10px; */
       /* background-color: yellow; */
   }
+  .empty1 {
+      height: 50px;
+      width: 100%;
+  }
   #links {
     /* color: black; */
     color: white;

@@ -59,7 +59,7 @@
           <li class="nav-item ml-5 active">
             <a class="nav-link" id="links" href="#feedback">Feedback</a>
           </li>
-          <li class="nav-item ml-5">
+          <!-- <li class="nav-item ml-5">
             <a class="nav-link" id="links"><i class="fas fa-map-marker-alt"></i><span id="location"></span></a>
           </li>
           <li class="nav-item ml-5">
@@ -71,14 +71,26 @@
             <a class="nav-link" id="links">
               <p class="far fa-clock commonStuff"><span id="time"></span></p>
             </a>
-          </li>
+          </li> -->
         </ul>
       </div>
   </nav>
   <!-- <div class="container main" > -->
   <a name="mediaportal"></a>
   <section id="main">
-
+      <div class="container" style="text-align: center">
+          <div class="row secondrow justify-content-center" id="currentUserInfo">
+            <div class="col-md-4 col-xl-4">
+              <p><i class="fas fa-map-marker-alt"></i><span id="location"></span></p>
+            </div>
+            <div class="col-md-4 col-xl-4">
+              <p class="fas fa-thermometer-empty"><span id="temp"></span></p>
+            </div>
+            <div class="col-md-4 col-xl-4">
+              <p class="far fa-clock"><span id="time"></span></p>
+            </div>
+          </div>
+        </div>
     <!-- jumbotron starts here -->
     <div class="jumbotron" style="background: rgba(255, 255, 255, 0.5); max-width: 80%; margin: 0 auto; text-align: center">
 
@@ -153,6 +165,7 @@
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
+            <div class="modal-header">*Due to proprietary issues, some videos can only be played on YouTube.  If video is unavailable, please refer to the link left of the search results*</div>
           <div class="modal-body">
 
             <iframe id="iframeYoutube" width="100%" height="315" src="https://www.youtube.com/embed/e80BbX05D7Y"

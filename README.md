@@ -1,4 +1,4 @@
-# Columbia-Project01
+# Media Portal
 1. This is a team project that I have worked with four other classmets. The purpose of this website is to provide an equal representation of
 the liberal and conservative media.
 
@@ -16,6 +16,6 @@ contact form.
 6. The top of the website displays current location, temparature and time.
 
 
-Link to the deployed project:  https://kamalnyc17.github.io/Columbia-Project01/
+Link to the deployed project:  https://kamalnyc17.github.io/Media_Portal/
 
 Technologies Used: HTML, CSS, JavaScript, Jquery, Bootstrap, Firebase, AJAX / JSON, Moment.js, Postmail
